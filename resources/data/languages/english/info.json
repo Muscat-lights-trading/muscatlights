@@ -1,0 +1,27 @@
+{
+  "english": {
+    "metaDescription": "Muscat Light Trading Company",
+    "language": "En",
+    "english": "English",
+    "arabic": "العربية",
+    "home": "Home",
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact",
+    "blog": "Blog",
+
+    "heroH1": "Strategic Governance for Sustainable <strong>Business Growth</strong>",
+    "heroDescription": "<strong>MLT</strong> maximizes your data's potential, turning insights into strategic assets. Convert data into actionable strategies for unparalleled <strong>business success</strong>.",
+    "heroGetStart": "Get Started Now",
+
+    "aboutTitle": "ABOUT OUR COMPANY",
+    "aboutHeader": "Providing Expert Advice On Business Consulting, Planning & Success",
+    "aboutDescription": "Unlock your business's full potential with Muscat Light Trading. We specialize in expert advice, offering invaluableinsights into business consulting, meticulous planning, and the pathways to unparalleled success. Trust us to guide your journey towards strategic excellence.",
+    "experienceYears": "YEARS<br> EXPERIENCE<br> IN CONSULTING",
+    "aboutBusinessGrowth": "Business Growth",
+    "aboutBusinessResarch": "Analysis & Research",
+    "aboutBusinessSecurity": "100% Secure",
+
+    "buttonExploreMore": "Explore More"
+  }
+}
