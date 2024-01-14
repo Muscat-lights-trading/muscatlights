@@ -1,16 +1,16 @@
 .light-theme {
   color: #10111f;
-  background: #fff; }
+  background: #fdfdfd; }
 
 .dark-theme {
-  color: #fff;
+  color: #fdfdfd;
   background: #10111f; }
 
 .light-theme-text {
   color: #10111f; }
 
 .dark-theme-text {
-  color: #fff; }
+  color: #fdfdfd; }
 
 *,
 *::after,
@@ -74,7 +74,7 @@ button[dir="rtl"] {
   border: none;
   outline: none;
   display: inline-flex;
-  padding: 10px 15px;
+  padding: 7px 15px;
   border: 2px solid #ff8201;
   border-radius: 10px;
   transition: 0.3s;
@@ -82,7 +82,7 @@ button[dir="rtl"] {
   cursor: pointer; }
   .button-primary:hover {
     background: #ff8201;
-    color: #fff; }
+    color: #fdfdfd; }
 
 .slider-wrapper {
   width: 100%;
@@ -338,6 +338,80 @@ button[dir="rtl"] {
               .main-app .about-wrapper .container .about .about-content .about-comments .about-values div span {
                 text-wrap: nowrap;
                 font-size: 18px; }
+  .main-app .services-wrapper {
+    width: 100%;
+    margin-top: 80px;
+    padding-bottom: 50px; }
+    .main-app .services-wrapper .container .services {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center; }
+      .main-app .services-wrapper .container .services .services-content {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+        max-width: 100%;
+        overflow: hidden; }
+        .main-app .services-wrapper .container .services .services-content h3 {
+          font-size: 35px; }
+        .main-app .services-wrapper .container .services .services-content .services-cards {
+          display: flex;
+          flex-direction: row;
+          text-align: start;
+          margin-top: 50px;
+          transition: transform 0.5s ease-in-out; }
+          .main-app .services-wrapper .container .services .services-content .services-cards .services-card {
+            min-width: 300px;
+            width: 300px;
+            padding: 20px;
+            border-radius: 15px;
+            margin-right: 20px;
+            cursor: pointer;
+            transition: 0.3s; }
+            .main-app .services-wrapper .container .services .services-content .services-cards .services-card:hover {
+              background: #ff8201;
+              color: #fdfdfd; }
+            .main-app .services-wrapper .container .services .services-content .services-cards .services-card .service-card-header {
+              display: flex;
+              align-items: center; }
+              .main-app .services-wrapper .container .services .services-content .services-cards .services-card .service-card-header i {
+                font-size: 35px;
+                padding: 15px; }
+            .main-app .services-wrapper .container .services .services-content .services-cards .services-card p {
+              border-top: 2px solid lightgray;
+              font-size: 13px;
+              padding-top: 15px;
+              margin: 15px 0;
+              min-height: 130px;
+              display: -webkit-box;
+              -webkit-box-orient: vertical;
+              overflow: hidden;
+              -webkit-line-clamp: 4;
+              /* Number of lines to show */
+              text-overflow: ellipsis; }
+            .main-app .services-wrapper .container .services .services-content .services-cards .services-card .service-button {
+              display: flex;
+              width: 100%;
+              justify-content: end;
+              cursor: pointer;
+              transition: 0; }
+              .main-app .services-wrapper .container .services .services-content .services-cards .services-card .service-button a {
+                border: none;
+                color: inherit; }
+      .main-app .services-wrapper .container .services .pagination-button {
+        display: flex;
+        width: 100%;
+        justify-content: center; }
+        .main-app .services-wrapper .container .services .pagination-button button {
+          text-align: center;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          min-width: 120px;
+          margin: 0 10px; }
 
 @media (max-width: 1200px) {
   .main-app .about-wrapper .container .about {

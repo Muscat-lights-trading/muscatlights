@@ -1,0 +1,71 @@
+{
+  "services": {
+    "1": {
+      "title": "Corporate Governance Consulting",
+      "description": "Offer consulting services to help companies establish effective corporate governance frameworks, policies, and procedures.",
+      "icon": "fa-bank"
+    },
+    "2": {
+      "title": "Board Evaluation Services",
+      "description": "Provide independent assessments of board performance, including evaluations of individual directors and overall board effectiveness.",
+      "icon": " fa-calculator"
+    },
+    "3": {
+      "title": "Compliance Training",
+      "description": "Develop and deliver training programs on regulatory compliance, ethics, and corporate governance best practices for employees at all levels.",
+      "icon": "fa-check-square"
+    },
+    "4": {
+      "title": "Secretarial Services Outsourcing",
+      "description": "Offer outsourced secretarial services to companies that require assistance with administrative tasks such as maintaining statutory registers, filing annual returns, and managing board meetings.",
+      "icon": "fa-pencil-square"
+    },
+
+    "5": {
+      "title": "Corporate Secretarial Software Development",
+      "description": "Develop software solutions specifically designed for corporate secretaries to streamline their workflow, manage documents, track compliance requirements, etc.",
+      "icon": " fa-tv"
+    },
+
+    "6": {
+      "title": "Governance Risk & Compliance (GRC) Solutions",
+      "description": "Develop or offer GRC software platforms that help organizations manage risks, ensure compliance with regulations and standards while aligning with their strategic objectives.",
+      "icon": "fa-exclamation-triangle"
+    },
+
+    "7": {
+      "title": "Proxy Advisory Services",
+      "description": "Provide research-based recommendations on voting decisions for institutional investors during shareholder meetings based on analysis of company performance and adherence to good governance practices.",
+      "icon": "fa-tasks"
+    },
+
+    "8": {
+      "title": "Board Portal Platforms",
+      "description": "Create or offer secure online platforms that facilitate efficient communication between board members by providing a centralized location for sharing documents, scheduling meetings, conducting virtual voting processes etc.",
+      "icon": "fa-laptop"
+    },
+
+    "9": {
+      "title": "Corporate Governance Training Programs",
+      "description": "Design and deliver training programs focused on educating directors and executives about the principles of good corporate governance to enhance their understanding of responsibilities and best practices in this area.",
+      "icon": "fa-mortar-board"
+    },
+
+    "10": {
+      "title": "Shareholder Engagement Services",
+      "description": "Assist companies in developing strategies for effective shareholder engagement through targeted communications initiatives aimed at building trust among shareholders while addressing concerns related to transparency and accountability.",
+      "icon": "fa-users"
+    },
+    "11": {
+      "title": "Web Design Services",
+      "description": "Craft captivating websites for a standout online presence, blending user-friendly design with compelling visuals.",
+      "icon": "fa-globe "
+    },
+    "12": {
+      "title": "Digital Marketing Services",
+      "description": "Boost online growth with our results-driven digital strategies, covering SEO, social media, and impactful content creation.",
+      "icon": "fa-bullhorn "
+    }
+  },
+  "buttonReadMore": "Read More"
+}
