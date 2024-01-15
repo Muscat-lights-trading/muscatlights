@@ -251,7 +251,7 @@ button[dir="rtl"] {
       background: url(../images/hero-full-ltr.png) no-repeat center right;
       background-size: cover; }
     .header-app .hero[dir="rtl"] {
-      background: url(../images/hero-full-rtl.png) no-repeat center right;
+      background: url(../images/hero-full-rtl.png) no-repeat center left;
       background-size: cover; }
     .header-app .hero .container {
       height: 100%;
@@ -442,7 +442,7 @@ button[dir="rtl"] {
     background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.3)), url(../images/hero-full-ltr.png) no-repeat center right;
     background-size: cover; }
   .header-app .hero[dir="rtl"] {
-    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.3)), url(../images/hero-full-rtl.png) no-repeat center right;
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.3)), url(../images/hero-full-rtl.png) no-repeat center left;
     background-size: cover; }
   .header-app .hero .container {
     grid-template-columns: 1fr; }
