@@ -126,6 +126,7 @@ function themeJS() {
         lightThemeButton.style.display = `none`;
     }
 }
+themeJS();
 // Language Function  //////////////////////////////////////////////////////
 
 let language;
@@ -258,12 +259,14 @@ function languageJS() {
                         clearInterval(serviceInterval);
                         services(data);
 
+                    }).catch(error => {
+                        console.error('Error 212', error);
                     });
 
 
             })
             .catch(error => {
-                console.error('Error fetching language file:', error);
+                console.error('Error 213', error);
             });
 
         // set font of input tag
@@ -273,6 +276,7 @@ function languageJS() {
         });
     }
 }
+languageJS();
 
 // Slider //////////////////////////////////////////////////////////////////
 document.addEventListener('DOMContentLoaded', function () {
