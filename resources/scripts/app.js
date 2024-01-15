@@ -257,7 +257,9 @@ function languageJS() {
                 fetch(`resources/data/services/${language}/services.json`)
                     .then(response => response.json())
                     .then(data => {
+                        clearInterval(serviceInterval);
                         services(data);
+
                     });
 
 
@@ -407,7 +409,6 @@ function services(data) {
 
     function serviceMaker() {
         slider.innerHTML = '';
-
         dataShow[sliderindex].forEach(element => {
             const serviceInfo = data.services[element];
 
