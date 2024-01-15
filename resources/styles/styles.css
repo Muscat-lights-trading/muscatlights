@@ -86,25 +86,28 @@ button[dir="rtl"] {
 
 .slider-wrapper {
   width: 100%;
-  padding: 80px 20px;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center; }
-  .slider-wrapper .container .slider-container {
+  .slider-wrapper .slider-inner-contetns {
     width: 100%;
-    overflow: hidden; }
-  .slider-wrapper .container .slider {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.5s ease-in-out; }
-  .slider-wrapper .container .slider-item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 15px; }
+    padding: 80px 20px;
+    margin-bottom: 2px; }
+    .slider-wrapper .slider-inner-contetns .container .slider-container {
+      width: 100%;
+      overflow: hidden; }
+    .slider-wrapper .slider-inner-contetns .container .slider {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.5s ease-in-out; }
+    .slider-wrapper .slider-inner-contetns .container .slider-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 15px; }
 
 .footer-app {
   width: 100%;
@@ -178,6 +181,7 @@ button[dir="rtl"] {
                 .header-app .nav-bar .container .header-contents .header-tools .header-icons .language-wrapper .language-button-container .language-button:hover {
                   color: #ff8201; }
             .header-app .nav-bar .container .header-contents .header-tools .header-icons .language-wrapper .languages {
+              z-index: 1000;
               font-family: "Vazirmatn" !important;
               display: none;
               flex-direction: column;
@@ -278,7 +282,8 @@ button[dir="rtl"] {
     padding: 20px;
     display: flex;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    margin-top: 50px; }
     .main-app .about-wrapper .container .about {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -353,22 +358,26 @@ button[dir="rtl"] {
         flex-direction: column;
         text-align: center;
         padding: 20px;
-        max-width: 100%;
-        overflow: hidden; }
+        width: 100%; }
         .main-app .services-wrapper .container .services .services-content h3 {
           font-size: 35px; }
         .main-app .services-wrapper .container .services .services-content .services-cards {
+          width: 100%;
+          margin-top: 50px;
           display: flex;
           flex-direction: row;
           text-align: start;
-          margin-top: 50px;
-          transition: transform 0.5s ease-in-out; }
+          overflow: hidden;
+          flex-wrap: nowrap;
+          transition: transform 0.5s ease-in-out;
+          padding: 0 30px; }
           .main-app .services-wrapper .container .services .services-content .services-cards .services-card {
-            min-width: 300px;
-            width: 300px;
+            display: flex;
+            flex-direction: column;
+            flex: 0 0 calc(100% / 3);
             padding: 20px;
             border-radius: 15px;
-            margin-right: 20px;
+            margin-right: 10px;
             cursor: pointer;
             transition: 0.3s; }
             .main-app .services-wrapper .container .services .services-content .services-cards .services-card:hover {
@@ -411,7 +420,75 @@ button[dir="rtl"] {
           justify-content: center;
           align-items: center;
           min-width: 120px;
-          margin: 0 10px; }
+          margin: 10px 10px;
+          margin-top: 20px; }
+  .main-app .offers-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    margin: 50px 0; }
+    .main-app .offers-wrapper .container .offers {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 50px; }
+      .main-app .offers-wrapper .container .offers .offers-description {
+        padding: 50px 0; }
+        .main-app .offers-wrapper .container .offers .offers-description h3 {
+          font-size: 20px;
+          margin-bottom: 10px; }
+        .main-app .offers-wrapper .container .offers .offers-description p {
+          line-height: 1.7; }
+      .main-app .offers-wrapper .container .offers .video-cover {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+        overflow: hidden; }
+        .main-app .offers-wrapper .container .offers .video-cover[dir="rtl"] {
+          border-top-right-radius: 50%; }
+        .main-app .offers-wrapper .container .offers .video-cover[dir="ltr"] {
+          border-top-left-radius: 50%; }
+        .main-app .offers-wrapper .container .offers .video-cover img {
+          display: block;
+          object-fit: cover;
+          object-position: center; }
+        .main-app .offers-wrapper .container .offers .video-cover i {
+          color: #ff8201;
+          font-size: 100px;
+          opacity: 80%;
+          cursor: pointer;
+          position: absolute; }
+  .main-app .video-player {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 98%;
+    height: 98%;
+    left: 50%;
+    top: 50%;
+    padding: 50px;
+    border-radius: 50px;
+    background: #10111ff1;
+    transform: translate(-50%, -50%); }
+    .main-app .video-player i {
+      color: #ff8201;
+      font-size: 35px;
+      cursor: pointer;
+      position: fixed;
+      top: 50px;
+      right: 50px;
+      z-index: 100;
+      transition: 0.3s; }
+      .main-app .video-player i:hover {
+        transform: scale(1.2);
+        color: #fdfdfd; }
+    .main-app .video-player iframe {
+      width: 530px;
+      height: 316px;
+      display: block; }
 
 @media (max-width: 1200px) {
   .main-app .about-wrapper .container .about {
@@ -470,7 +547,12 @@ button[dir="rtl"] {
           .main-app .about-wrapper .container .about .about-content .about-comments .about-values div i {
             font-size: 14px; }
           .main-app .about-wrapper .container .about .about-content .about-comments .about-values div span {
-            font-size: 12px; } }
+            font-size: 12px; }
+  .main-app .services-wrapper .container .services .services-content .services-cards {
+    padding: 0 20px; }
+    .main-app .services-wrapper .container .services .services-content .services-cards .services-card {
+      flex: 0 0 calc(100% / 2);
+      margin-right: 20px; } }
 
 @media (max-width: 800px) {
   .header-app {
@@ -513,7 +595,14 @@ button[dir="rtl"] {
         width: 100%;
         align-items: center;
         text-align: center;
-        justify-content: center; } }
+        justify-content: center; }
+  .main-app .services-wrapper .container .services .services-content h3 {
+    font-size: 27px; }
+  .main-app .services-wrapper .container .services .services-content .services-cards {
+    padding: 0 20px; }
+    .main-app .services-wrapper .container .services .services-content .services-cards .services-card {
+      flex: 0 0 calc(100% / 1);
+      margin-right: 20px; } }
 
 @media (max-width: 500px) {
   .header-app .hero .container .hero-contents h1 {

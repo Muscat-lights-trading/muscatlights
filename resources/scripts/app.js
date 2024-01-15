@@ -126,10 +126,6 @@ function themeJS() {
         lightThemeButton.style.display = `none`;
     }
 }
-themeJS();
-
-
-
 // Language Function  //////////////////////////////////////////////////////
 
 let language;
@@ -230,12 +226,13 @@ function languageJS() {
                 const hero = document.querySelector('.hero');
                 const aboutImage = document.querySelector('.about-image img')
                 const button = document.querySelectorAll('button');
-
+                const offerImage = document.querySelector(".video-cover");
                 if (language === 'english') {
                     body.style.fontFamily = 'Poppins, sans-serif';
                     body.style.direction = 'ltr';
                     hero.setAttribute('dir', "ltr");
                     aboutImage.setAttribute('dir', "ltr");
+                    offerImage.setAttribute('dir', "ltr");
                     button.forEach(element => {
                         element.setAttribute('dir', "ltr");
                     });
@@ -247,6 +244,7 @@ function languageJS() {
                     body.style.direction = 'rtl';
                     hero.setAttribute('dir', "rtl");
                     aboutImage.setAttribute('dir', "rtl");
+                    offerImage.setAttribute('dir', "rtl");
                     button.forEach(element => {
                         element.setAttribute('dir', "rtl");
                     });
@@ -275,7 +273,6 @@ function languageJS() {
         });
     }
 }
-languageJS();
 
 // Slider //////////////////////////////////////////////////////////////////
 document.addEventListener('DOMContentLoaded', function () {
@@ -305,85 +302,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-
-
-
-
-
-
 // Services Slider ////////////////////////////////////////////////////////
-
-
-// let serviceInterval;
-// function services(data) {
-
-//     let sliderindex = 1;
-//     const dataShow = [
-//         ['1', '2', '3', '4'],
-//         ['1', '2', '3', '4'],
-//         ['2', '3', '4', '5'],
-//         ['3', '4', '5', '6'],
-//         ['4', '5', '6', '7'],
-//         ['5', '6', '7', '8'],
-//         ['6', '7', '8', '9'],
-//         ['7', '8', '9', '10'],
-//         ['8', '9', '10', '11'],
-//         ['9', '10', '11', '12'],
-//         ['10', '11', '12', '1'],
-//         ['11', '12', '1', '2'],
-//         ['12', '1', '2', '3']
-//     ];
-//     // console.log(Object.keys(data.services))
-//     // Object.keys(data.services).forEach(serviceElem => {
-//     //     dataShow.forEach(element => {
-//     //         if (element[serviceElem] === serviceElem) {
-//     //             console.log(element);
-//     //             console.log(serviceElem)
-//     //         }
-
-//     //     });
-
-//     const slider = document.querySelector('.services-cards');
-//     slider.innerHTML = '';
-//     clearInterval(serviceInterval);
-//     function serviceMaker() {
-//         // console.log(dataShow[sliderindex]);
-//         slider.innerHTML = '';
-//         dataShow[sliderindex].forEach(element => {
-//             console.log(data.services[element].title)
-//             console.log(element)
-
-//             // console.log(data.services[element])
-//             // console.log(Object.keys(data.services[element]))
-
-//             slider.innerHTML += `
-//                                     <!-- single service -->
-//                                         <div class="services-card  theme theme-text">
-//                                             <div class="service-card-header">
-//                                                 <i class="fa ${data.services[element].icon}"></i>
-//                                                 <h4 >${data.services[element].title}</h4>
-//                                             </div>
-//                                             <p >${data.services[element].description}</p>
-//                                             <div class="service-button">
-//                                                 <a href="" class="button-primary" data-lang="buttonReadMore">
-//                                                     ${data.buttonReadMore}
-//                                                 </a>
-//                                             </div>
-//                                         </div>
-//                                 `;
-
-//         });
-//         console.log('--------')
-
-//         sliderindex += 1;
-//         if (sliderindex >= dataShow.length) sliderindex = 1;
-//         if (sliderindex < 1) sliderindex = dataShow.length;
-//         themeJS();
-//     };
-//     serviceMaker();
-//     serviceInterval = setInterval(serviceMaker, 2000);
-// }
-
 let sliderindex = 1;
 let serviceInterval;
 
@@ -452,6 +371,12 @@ function services(data) {
     const nextButton = document.getElementById('nextButton');
     const prevButton = document.getElementById('prevButton');
 
+    nextButton.addEventListener('mouseenter', stopInterval);
+    nextButton.addEventListener('mouseleave', startInterval);
+    prevButton.addEventListener('mouseenter', stopInterval);
+    prevButton.addEventListener('mouseleave', startInterval);
+
+
     nextButton.addEventListener('click', () => {
         sliderindex += 1;
         if (sliderindex >= dataShow.length) sliderindex = 0;
@@ -467,3 +392,29 @@ function services(data) {
     // Start the interval initially
     startInterval();
 }
+
+// Offers section /////////////////////////////////////////////////////////
+
+const videoPlayerButton = document.querySelector(".video-runner");
+const videoCloserButton = document.querySelector(".video-closer");
+const videoPlayer = document.querySelector('.video-player');
+const youtubeVideo = document.getElementById('youtubeVideo');
+
+videoCloserButton.addEventListener("click", function () {
+    youtubeVideo.src = '';
+    videoPlayer.style.display = "none";
+})
+
+videoPlayerButton.addEventListener("click", function () {
+    videoPlayer.style.display = "flex";
+})
+
+
+
+
+// initializer //////////
+
+document.addEventListener('DOMContentLoaded', function () {
+    languageJS();
+    themeJS();
+})
