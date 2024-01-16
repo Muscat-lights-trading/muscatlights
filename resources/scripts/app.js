@@ -157,6 +157,7 @@ function languageJS() {
 
     // Event listener for the button click
     languageButton.addEventListener('click', function (event) {
+        console.log('check1')
         event.stopPropagation(); // Prevents the click event from bubbling to the document
         if (languageWrapper.style.display === 'none' || languageWrapper.style.display === '') {
             showLanguageList();
@@ -228,6 +229,7 @@ function languageJS() {
                 const aboutImage = document.querySelector('.about-image img')
                 const button = document.querySelectorAll('button');
                 const offerImage = document.querySelector(".video-cover");
+                const chartLines = document.querySelector('.chart-lines ');
                 if (language === 'english') {
                     body.style.fontFamily = 'Poppins, sans-serif';
                     body.style.direction = 'ltr';
@@ -237,7 +239,7 @@ function languageJS() {
                     button.forEach(element => {
                         element.setAttribute('dir', "ltr");
                     });
-
+                    chartLines.setAttribute('dir', "ltr");
 
 
                 } else {
@@ -249,6 +251,8 @@ function languageJS() {
                     button.forEach(element => {
                         element.setAttribute('dir', "rtl");
                     });
+                    chartLines.setAttribute('dir', "rtl");
+
                     // update servicees language
 
                 }
@@ -410,6 +414,7 @@ videoCloserButton.addEventListener("click", function () {
 })
 
 videoPlayerButton.addEventListener("click", function () {
+    youtubeVideo.src = 'https://www.youtube.com/embed/6mkoGSqTqFI?si=FMuvhdYmYHW5UD3F';
     videoPlayer.style.display = "flex";
 })
 
@@ -418,7 +423,8 @@ videoPlayerButton.addEventListener("click", function () {
 
 // initializer //////////
 
-document.addEventListener('DOMContentLoaded', function () {
-    languageJS();
-    themeJS();
-})
+// document.addEventListener('DOMContentLoaded', function () {
+
+//     themeJS();
+//     languageJS();
+// })
