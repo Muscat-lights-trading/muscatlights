@@ -64,6 +64,11 @@ body {
   font-size: 15px;
   font-weight: bold; }
 
+.devider {
+  height: 2px;
+  width: 100%;
+  margin: 50px 0; }
+
 button[dir="ltr"] {
   font-family: Poppins; }
 
@@ -110,13 +115,57 @@ button[dir="rtl"] {
       margin: 0 15px; }
 
 .footer-app {
-  width: 100%;
-  padding-top: 2px; }
-  .footer-app div .container {
+  width: 100%; }
+  .footer-app .devider {
+    margin: 0; }
+  .footer-app .container .footer {
+    width: 100%;
     display: flex;
-    padding: 25px 15px;
-    justify-content: space-between;
-    align-items: center; }
+    flex-direction: column;
+    padding: 25px 0px;
+    justify-content: space-between; }
+    .footer-app .container .footer .footer-contact-us {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 25px;
+      align-items: start; }
+      .footer-app .container .footer .footer-contact-us .contact-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: top;
+        margin: 40px 0;
+        text-align: center; }
+        .footer-app .container .footer .footer-contact-us .contact-card i {
+          font-size: 40px;
+          margin-bottom: 15px;
+          color: #ff8201; }
+        .footer-app .container .footer .footer-contact-us .contact-card a {
+          font-size: 15px;
+          transition: 0.3s; }
+          .footer-app .container .footer .footer-contact-us .contact-card a address {
+            font-style: normal; }
+          .footer-app .container .footer .footer-contact-us .contact-card a:hover {
+            color: #ff8201; }
+  .footer-app .copyright-wrapper {
+    padding: 20px; }
+    .footer-app .copyright-wrapper .container .copyright {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 14px; }
+      .footer-app .copyright-wrapper .container .copyright .social-media {
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        .footer-app .copyright-wrapper .container .copyright .social-media a i {
+          font-size: 25px;
+          margin: 0 10px;
+          transition: 0.7s; }
+          .footer-app .copyright-wrapper .container .copyright .social-media a i:hover {
+            transform: scale(1.5) rotate(360deg);
+            color: #ff8201; }
 
 .header-app {
   width: 100%;
@@ -492,7 +541,7 @@ button[dir="rtl"] {
             .main-app .offers-wrapper .container .offers .offer-description-chart .chart-lines .chart-line-card progress::-webkit-progress-bar {
               background-color: #ff8201; }
             .main-app .offers-wrapper .container .offers .offer-description-chart .chart-lines .chart-line-card progress::-webkit-progress-value {
-              background-color: #10111f; }
+              background-color: #272634c9; }
       .main-app .offers-wrapper .container .offers .video-cover {
         display: flex;
         justify-content: center;
@@ -543,6 +592,85 @@ button[dir="rtl"] {
       width: 530px;
       height: 316px;
       display: block; }
+  .main-app .counter-wrapper {
+    margin: 50px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center; }
+    .main-app .counter-wrapper .container .counter {
+      width: 100%;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      justify-items: center;
+      grid-gap: 25px; }
+      .main-app .counter-wrapper .container .counter .counter-card {
+        display: flex;
+        justify-content: start;
+        align-items: center; }
+        .main-app .counter-wrapper .container .counter .counter-card .counter-card-header {
+          margin: 0 10px;
+          display: flex;
+          align-items: center;
+          justify-content: center; }
+          .main-app .counter-wrapper .container .counter .counter-card .counter-card-header img {
+            height: 80px; }
+        .main-app .counter-wrapper .container .counter .counter-card .counter-card-info span {
+          font-size: 35px;
+          font-weight: bold; }
+        .main-app .counter-wrapper .container .counter .counter-card .counter-card-info p {
+          font-size: 14px; }
+  .main-app .booking-wrapper {
+    margin-top: 100px;
+    margin-bottom: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: url(../images/booking-image.jpeg) top no-repeat fixed;
+    background-size: cover; }
+    .main-app .booking-wrapper .container .booking {
+      padding: 140px 20px;
+      position: relative;
+      display: flex;
+      justify-content: end; }
+      .main-app .booking-wrapper .container .booking .booking-card {
+        width: 50%;
+        padding: 70px 50px;
+        border-radius: 25px;
+        opacity: 90%; }
+        .main-app .booking-wrapper .container .booking .booking-card h5 {
+          font-size: 30px;
+          display: block; }
+  .main-app .get-in-touch-wrpper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+    margin-top: 50px;
+    padding: 20px; }
+    .main-app .get-in-touch-wrpper .container .get-in-touch {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 30px; }
+      .main-app .get-in-touch-wrpper .container .get-in-touch .get-in-touch-text h6 {
+        font-size: 30px;
+        font-weight: normal; }
+      .main-app .get-in-touch-wrpper .container .get-in-touch .get-in-touch-form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 15px; }
+        .main-app .get-in-touch-wrpper .container .get-in-touch .get-in-touch-form > * {
+          padding: 10px;
+          border: none;
+          outline: none;
+          border-radius: 10px;
+          border: 1px solid #ff8201;
+          background: 0; }
+        .main-app .get-in-touch-wrpper .container .get-in-touch .get-in-touch-form button {
+          background: #ff8201;
+          color: #fdfdfd;
+          font-size: 14px; }
 
 @media (max-width: 1200px) {
   .main-app .about-wrapper .container .about {
@@ -621,7 +749,12 @@ button[dir="rtl"] {
       height: 400px;
       display: block;
       object-fit: cover;
-      object-position: top center; } }
+      object-position: top center; }
+  .main-app .counter-wrapper {
+    margin: 50px 0; }
+    .main-app .counter-wrapper .container .counter {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 50px; } }
 
 @media (max-width: 800px) {
   .header-app {
@@ -683,7 +816,12 @@ button[dir="rtl"] {
     /* Set a fixed height for the progress bar */
     margin: 7px 0; }
   .main-app .offers-wrapper .container .offers .video-cover i {
-    font-size: 80px; } }
+    font-size: 80px; }
+  .main-app .counter-wrapper {
+    margin: 0px 0; }
+    .main-app .counter-wrapper .container .counter {
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 70px; } }
 
 @media (max-width: 500px) {
   .header-app .hero .container .hero-contents h1 {

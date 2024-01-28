@@ -230,6 +230,7 @@ function languageJS() {
                 const button = document.querySelectorAll('button');
                 const offerImage = document.querySelector(".video-cover");
                 const chartLines = document.querySelector('.chart-lines ');
+
                 if (language === 'english') {
                     body.style.fontFamily = 'Poppins, sans-serif';
                     body.style.direction = 'ltr';
@@ -257,11 +258,13 @@ function languageJS() {
 
                 }
                 // update servicees language
+                clearInterval(serviceInterval);
                 fetch(`resources/data/services/${language}/services.json`)
                     .then(response => response.json())
                     .then(data => {
-                        clearInterval(serviceInterval);
+
                         services(data);
+                        console.log("check2")
 
                     }).catch(error => {
                         console.error('Error 212', error);
@@ -420,6 +423,55 @@ videoPlayerButton.addEventListener("click", function () {
 
 
 
+// Counter section ////////////////////////////////////////////////////////
+function counter() {
+    // Function to check if an element is in the viewport
+    function isInViewport(element) {
+        var rect = element.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
+
+    // Function to animate counting
+    function animateCounter(counter, targetCount, step = 1, delay = 30) {
+        var currentCount = 0;
+
+        function updateCounter() {
+            if (currentCount < targetCount) {
+                currentCount += step;
+                counter.innerText = "+" + Math.round(currentCount); // Include the "+" sign
+                setTimeout(updateCounter, delay);
+            }
+        }
+
+        updateCounter();
+    }
+
+    // Function to handle scroll event
+    function handleScroll() {
+        var counters = document.querySelectorAll('.counter span');
+        var counterSection = document.querySelector('.counter-wrapper');
+
+        if (isInViewport(counterSection)) {
+            // Start counting animation for each counter
+            counters.forEach(function (counter) {
+                var targetCount = parseInt(counter.textContent.trim()); // Use current text content as target count
+                animateCounter(counter, targetCount);
+            });
+
+            // Remove the scroll event listener after starting the animation
+            window.removeEventListener('scroll', handleScroll);
+        }
+    }
+
+    // Attach scroll event listener
+    window.addEventListener('scroll', handleScroll);
+}
+counter();
 
 // initializer //////////
 

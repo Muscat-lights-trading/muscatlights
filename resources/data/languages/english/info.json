@@ -31,9 +31,24 @@
     "offersDescription": "Embark on a transformative journey with us as your trusted partner.  At the heart of our success lies a fusion of Business Insight, World-Class Consulting, and cutting-edge MLT services. Our commitment to excellence propels us to potential with our comprehensive expertise, guiding you towards success in an ever-evolving landscape.",
     "offersBusineshGrowth": "Business <br> Growth",
 
+    "counterSuccessProject": "Successfully <br> Completed Projects",
+    "counterSatisfied": "Satisfied <br> 100% Our Clients",
+    "counterCountries": "All Over The World <br> We Are Available",
+    "counterExprience": "Years of Experiences <br> To Run This Company",
+
+    "bookingHeader": "Offering The Best Experience Of <strong>Secretary Services</strong>",
+
+    "getInTouchHeader": "Request a Call Back",
+    "getInTouchDescription": "Have a question or want to discuss a project? Feel free to use our quick and easy contact form below. We appreciate your interest and will get back to you promptly!",
+
+    "formPlaceholderName": "Name",
+    "formPlaceholderEmail": "Email",
+    "formPlaceholderPhone": "Phone",
+
     "buttonNext": "Left",
     "buttonPrevious": "Right",
     "buttonReadMore": "Read More",
-    "buttonExploreMore": "Explore More"
+    "buttonExploreMore": "Explore More",
+    "buttonSubmit": "Submit"
   }
 }

@@ -57,9 +57,24 @@
     "offersDescription": "انطلق في رحلة تحولية معنا كشريك موثوق لديك. في قلب نجاحنا يكمن اندماج بين رؤية الأعمال واستشارات عالمية الفئة وخدمات MLT الحديثة. التفاني للتميز يدفعنا نحو إمكاناتنا بخبرتنا الشاملة، موجهينك نحو النجاح في هذا السياق المتطور باستمرار.",
     "offersBusineshGrowth": "نمو  <br> الأعمال",
 
+    "counterSuccessProject": "تمت بنجاح <br> المشاريع المكتملة",
+    "counterSatisfied": "راضٍ <br> 100% عملائنا",
+    "counterCountries": "في جميع أنحاء العالم <br> نحن متاحون",
+    "counterExprience": "سنوات من الخبرة <br> لإدارة هذه الشركة",
+
+    "bookingHeader": "نقدم أفضل تجربة في خدمات السكرتارية <strong>خدمات السكرتارية</strong>",
+
+    "getInTouchHeader": "اطلب مكالمة هاتفية",
+    "getInTouchDescription": "هل لديك سؤال أو ترغب في مناقشة مشروع؟ لا تتردد في استخدام نموذج الاتصال السريع والسهل أدناه. نقدر اهتمامك وسنعود إليك في أقرب وقت ممكن!",
+
+    "formPlaceholderName": "الاسم",
+    "formPlaceholderEmail": "البريد الإلكتروني",
+    "formPlaceholderPhone": "الهاتف",
+
     "buttonNext": "يمين",
     "buttonPrevious": "يسار",
     "buttonReadMore": "اقرأ المزيد",
-    "buttonExploreMore": "استكشاف المزيد"
+    "buttonExploreMore": "استكشاف المزيد",
+    "buttonSubmit": "إرسال"
   }
 }
