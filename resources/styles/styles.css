@@ -826,7 +826,15 @@ button[dir="rtl"] {
     margin: 0px 0; }
     .main-app .counter-wrapper .container .counter {
       grid-template-columns: repeat(1, 1fr);
-      grid-gap: 70px; } }
+      grid-gap: 70px; }
+  .main-app .booking-wrapper .container .booking .booking-card {
+    margin: 0 auto;
+    width: 90%;
+    text-align: center; }
+    .main-app .booking-wrapper .container .booking .booking-card h5 {
+      font-size: 25px; }
+  .main-app .get-in-touch-wrpper .container .get-in-touch {
+    grid-template-columns: repeat(1, 1fr); } }
 
 @media (max-width: 500px) {
   .header-app .hero .container .hero-contents h1 {
@@ -842,4 +850,6 @@ button[dir="rtl"] {
     /* Set a fixed height for the progress bar */
     margin: 5px 0; }
   .main-app .offers-wrapper .container .offers .video-cover i {
-    font-size: 70px; } }
+    font-size: 70px; }
+  .main-app .get-in-touch-wrpper .container .get-in-touch .get-in-touch-form {
+    grid-template-columns: repeat(1, 1fr); } }
