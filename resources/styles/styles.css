@@ -669,11 +669,13 @@ button[dir="rtl"] {
           outline: none;
           border-radius: 10px;
           border: 1px solid #ff8201;
-          background: 0; }
+          background: 0;
+          color: #ff8201; }
         .main-app .get-in-touch-wrpper .container .get-in-touch .get-in-touch-form button {
           background: #ff8201;
           color: #fdfdfd;
-          font-size: 14px; }
+          font-size: 14px;
+          cursor: pointer; }
 
 @media (max-width: 1200px) {
   .main-app .about-wrapper .container .about {
