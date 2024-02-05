@@ -474,9 +474,7 @@ function counter() {
 counter();
 
 // initializer //////////
-
-// document.addEventListener('DOMContentLoaded', function () {
-
-//     themeJS();
-//     languageJS();
-// })
+window.addEventListener("load", () => {
+    themeJS();
+    languageJS();
+})
