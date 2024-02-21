@@ -148,28 +148,31 @@ function languageJS() {
     // Function to show the language list
     function showLanguageList() {
         languageWrapper.style.display = 'flex';
+        // console.log('show')
+
     }
 
     // Function to hide the language list
     function hideLanguageList() {
         languageWrapper.style.display = 'none';
+        // console.log('hide')
     }
 
     // Event listener for the button click
     languageButton.addEventListener('click', function (event) {
-        console.log('check1')
         event.stopPropagation(); // Prevents the click event from bubbling to the document
-        if (languageWrapper.style.display === 'none' || languageWrapper.style.display === '') {
+        console.log('cliked')
+        if (languageWrapper.style.display !== 'flex') {
             showLanguageList();
+            // console.log('show list')
+
         } else {
             hideLanguageList();
+            // console.log('hide list')
+
         }
     });
 
-    // Event listener for clicks on the document
-    document.addEventListener('click', function () {
-        hideLanguageList();
-    });
 
     // Prevent language list from hiding when clicking inside the languageWrapper
     languageWrapper.addEventListener('click', function (event) {
@@ -202,6 +205,11 @@ function languageJS() {
         });
     });
 
+    // Event listener for clicks on the document
+    document.addEventListener('click', function () {
+        hideLanguageList();
+    });
+
 
     // language initilaezer and Updater
     function languageInitializer(language) {
@@ -225,7 +233,7 @@ function languageJS() {
 
                 // Change font and direction based on the language
                 const body = document.querySelector('body');
-                const hero = document.querySelector('.hero');
+                const hero = document.querySelector('.header-app .hero');
                 const aboutImage = document.querySelector('.about-image img')
                 const button = document.querySelectorAll('button');
                 const offerImage = document.querySelector(".video-cover");
@@ -262,15 +270,11 @@ function languageJS() {
                 fetch(`resources/data/services/${language}/services.json`)
                     .then(response => response.json())
                     .then(data => {
-
                         services(data);
                         console.log("check2")
-
                     }).catch(error => {
                         console.error('Error 212', error);
                     });
-
-
             })
             .catch(error => {
                 console.error('Error 213', error);
@@ -282,8 +286,12 @@ function languageJS() {
             input.style.fontFamily = language === 'english' ? 'Poppins, sans-serif' : 'Vazirmatn, sans-serif';
         });
     }
+    console.log('my check point')
 }
-languageJS();
+// languageJS();
+
+
+
 
 // Slider //////////////////////////////////////////////////////////////////
 document.addEventListener('DOMContentLoaded', function () {
@@ -473,8 +481,25 @@ function counter() {
 }
 counter();
 
+// hero image Updater
+heroUpdater = () => {
+    language = localStorage.getItem("language");
+    heroImage = document.querySelector('.header-app .hero');
+
+    if (language = 'english') {
+        heroImage.style.background = "url(../images/hero-full-ltr.png) no-repeat center right";
+
+    } else {
+        heroImage.style.background = "url(../images/hero-full-rtl.png) no-repeat center left";
+
+    }
+
+
+}
+
 // initializer //////////
 window.addEventListener("load", () => {
     themeJS();
     languageJS();
+    // heroUpdater();
 })

@@ -222,6 +222,7 @@ button[dir="rtl"] {
               .header-app .nav-bar .container .header-contents .header-tools .header-icons .language-wrapper .language-button-container:hover {
                 background: #ff8201; }
               .header-app .nav-bar .container .header-contents .header-tools .header-icons .language-wrapper .language-button-container .language-button {
+                z-index: 1000;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -234,9 +235,8 @@ button[dir="rtl"] {
                 .header-app .nav-bar .container .header-contents .header-tools .header-icons .language-wrapper .language-button-container .language-button:hover {
                   color: #ff8201; }
             .header-app .nav-bar .container .header-contents .header-tools .header-icons .language-wrapper .languages {
-              z-index: 1000;
-              font-family: "Vazirmatn" !important;
               display: none;
+              font-family: "Vazirmatn" !important;
               flex-direction: column;
               position: absolute;
               top: 40px;
